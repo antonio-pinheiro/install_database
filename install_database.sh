@@ -25,7 +25,7 @@ install_mongodb_ubuntu(){
     echo "Installing mongoDB"
     echo
     sudo apt-get update -y
-    if  sudo apt-get install mongodb mongodb-tools mongoose -y; then
+    if  sudo apt-get install mongodb mongo-tools mongoose -y; then
         echo "mongoDB successfuly installed..."
         main_function
     else
