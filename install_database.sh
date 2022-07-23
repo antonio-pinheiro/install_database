@@ -84,7 +84,7 @@ do
 
     1)  install_mongodb;;
     2)  install_mongodb_ubuntu;;
-    3)  install_mysql;;
+    3)  install_mariadb;;
     4)  install_postgresql;;
     5)  exit
 
