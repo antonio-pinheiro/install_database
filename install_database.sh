@@ -6,8 +6,8 @@ install_mongodb(){
     echo "Installing mongoDB"
     echo
     wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | apt-key add - echo "deb http://repo.mongodb.org/apt/debian bullseye/mongodb-org/6.0 main" | tee /etc/apt/sources.list.d/mongodb-org-6.0.list
-    apt-get update -y
-    if  apt-get install mongodb-org -y; then
+    sudo apt-get update -y
+    if  sudo apt-get install mongodb-org -y; then
         echo "mongoDB successfuly installed..."
         echo
         echo "Configuring mongoDB..."
@@ -24,8 +24,8 @@ install_mongodb_ubuntu(){
     echo
     echo "Installing mongoDB"
     echo
-    apt-get update -y
-    if  apt-get install mongodb mongodb-tools mongoose -y; then
+    sudo apt-get update -y
+    if  sudo apt-get install mongodb mongodb-tools mongoose -y; then
         echo "mongoDB successfuly installed..."
         main_function
     else
@@ -40,8 +40,8 @@ install_mariadb(){
     echo
     echo "Installing MySQL / MariaDB"
     echo
-    apt-get update -y
-    if  apt-get install mariadb-server -y; then
+    sudo apt-get update -y
+    if  sudo apt-get install mariadb-server -y; then
         echo "MySQL / MariaDB successfuly installed..."
         main_function
     else
@@ -55,7 +55,7 @@ install_postgresql(){
     echo
     echo "Installing MySQL / MariaDB"
     echo
-    apt-get update -y
+    sudo apt-get update -y
     if  sudo apt install postgresql postgresql-contrib -y; then
         echo "PostgreSQL successfuly installed..."
         main_function
